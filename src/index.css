@@ -1,0 +1,169 @@
+.song-container{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player{
+min-height: 20vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+.time-control{
+  width: 50%;
+  display: flex;
+  padding: 1rem;
+}
+
+
+.time-control input{
+  width: 100%;
+  cursor: pointer;
+}
+
+
+.time-control p{
+  padding: 1rem ;
+}
+
+.btn-control{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.song-container img{
+  width: 20%;
+  border-radius: 50%;
+}
+
+.song-container h1,h2,h3{
+  color: rgb(46, 46, 46);
+}
+
+h2{
+  padding: 1rem 0 0 0;
+}
+
+.library{
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  overflow: scroll;
+  box-shadow: 2px 2px 50px grey;
+  z-index: 1;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.library h2{
+  padding: 1rem;
+}
+
+.library img{
+  width: 30%;
+}
+
+.library-song{
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  transition: 0.5s all;
+}
+
+.library-song:hover{
+  background: rgb(148, 174, 201);
+}
+
+.discription{
+  padding-left: 1rem;
+}
+
+.discription h3{
+  font-size: 1rem;
+  color: rgb(71, 68, 68);
+}
+.discription h4{
+  font-size: 0.8rem;
+  color: rgb(128, 125, 125);
+}
+
+*{
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155,155,155,0.5) transparent;
+}
+
+*::-webkit-scrollbar{
+  width: 5px;
+}
+*::-webkit-scrollbar-track{
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb{
+  background-color: rgba(155,155,155,0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+.selected{
+  background-color: rgb(121, 174, 226);
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+  align-items: center;
+}
+
+nav button{
+  border: 1px solid black;
+  background-color: white;
+  padding: 0.6rem;
+  transition: all 0.3s ease;
+  z-index: 100;
+  cursor: pointer;
+}
+
+nav button:hover{
+  background-color: black;
+  color: white;
+}
+
+.active-library{
+  transform: translateX(0%) !important;
+  opacity: 1 !important;
+}
+
+.App{
+  transition: all 0.5s ease;
+}
+
+.library-active{
+  margin-left: 20%;
+}
+
+@media screen and (max-width:768px){
+  .song-container img{
+    width: 50%;
+  }
+  .time-control{
+    width: 90%;
+  }
+  .btn-control{
+    width: 50%;
+  }
+  .library{
+    width: 100%;
+  }
+}
